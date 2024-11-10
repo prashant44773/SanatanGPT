@@ -1,0 +1,103 @@
+/* landing-page.component.css */
+
+/* Sacred Color Background for Dharma */
+.hero {
+  /* background-color: #f9c74f; Sacred yellow color */
+  background-image: linear-gradient(to top, #f9c74f, #facb61, #fad071, #fad481, #fad891);
+  padding: 60px 0;
+  color: white;
+}
+
+/* Hero Section */
+.hero-content {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Star Icon */
+.hero-icon {
+  font-size: 3rem;
+  margin-bottom: 15px; /* Distance between icon and title */
+  color: #e63946; /* Red, symbolic in Dharma */
+}
+
+/* Vyas Image */
+.hero-image img {
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle 3D effect */
+}
+
+/* Features Section */
+.features {
+  padding: 40px 0;
+}
+
+.feature {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    margin-top: 20px;
+  }
+}
+
+/* Body and Background */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #f8e6c1, #a67c52); /* Gradient background to give sacred feel */
+  font-family: 'Garamond', serif;
+  color: #4e3a2e;
+}
+
+/* Landing Page Container */
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Footer Styling */
+.footer {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #d49b4d;
+  border-color: #d49b4d;
+}
+
+.btn-primary:hover {
+  background-color: #b8860b;
+  border-color: #b8860b;
+}
