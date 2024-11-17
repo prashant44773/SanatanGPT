@@ -1,36 +1,86 @@
-<section class="hero">
+<!-- Hero Section -->
+<section class="hero" style="background: linear-gradient(to bottom, #fff5e1, #ffd9a3);">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 hero-content">
-        <mat-icon class="hero-icon">star</mat-icon>
-        <h1 class="hero-title">Unlock the Wisdom of Sanatan Granths with AI</h1>
-        <p class="hero-subtitle">Deep insights from ancient scriptures at your fingertips.</p>
+        <mat-icon class="hero-icon">auto_awesome</mat-icon>
+        <h1 class="hero-title">Unlock the Eternal Wisdom of Sanatan Granths</h1>
+        <p class="hero-subtitle">Explore divine insights from ancient scriptures with AI.</p>
         <div class="hero-buttons d-flex">
-          <button mat-raised-button color="primary" class="btn-primary mr-2">Explore Now</button>
+          <button mat-raised-button color="primary" class="btn-primary mr-3">Explore Now</button>
           <button mat-raised-button color="accent" class="btn-secondary">Learn More</button>
         </div>
       </div>
       <div class="col-md-6 hero-image">
-        <img src="assets/images/vyas.png" alt="Vyas" class="vyas-image img-fluid" />
+        <img src="assets/images/vyas.jfif" alt="Vyas" class="vyas-image img-fluid rounded-circle shadow" />
       </div>
     </div>
   </div>
 </section>
 
 <!-- Features Section -->
-<section class="features">
+<section class="features" style="background: url('assets/images/mandala-bg.png') no-repeat center; background-size: cover;">
   <div class="container">
+    <h2 class="section-title text-center">Key Features</h2>
     <div class="row">
       <div class="col-md-4" *ngFor="let feature of features">
-        <mat-card class="feature">
-          <mat-card-header>
-            <mat-card-title>{{ feature.title }}</mat-card-title>
-          </mat-card-header>
+        <mat-card class="feature shadow">
+          <div class="feature-icon-container text-center">
+            <mat-icon class="feature-icon">{{ feature.icon }}</mat-icon>
+          </div>
+          <mat-card-title class="feature-title">{{ feature.title }}</mat-card-title>
           <mat-card-content>
-            <p>{{ feature.description }}</p>
+            <p class="feature-description">{{ feature.description }}</p>
           </mat-card-content>
         </mat-card>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Scriptural Highlights Section -->
+<section class="scriptural-highlights" style="background-color: #fff5e1;">
+  <div class="container">
+    <h2 class="section-title text-center">Discover Sacred Texts</h2>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let scripture of scriptures">
+        <mat-card class="scripture shadow" >
+          <div class="scripture-card-wrapper">
+            <!-- Title with animation -->
+            <mat-card-title class="scripture-title animated-title">{{ scripture.name }}</mat-card-title>
+
+            <!-- Image with stylish frame and hover effect -->
+            <div class="image-frame">
+              <img mat-card-image [src]="scripture.image" [alt]="scripture.name" [ngStyle]="{'height': scripture.imageHeight + 'px'}" class="scripture-image" />
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ Section -->
+<section class="faq" style="background-color: #faf3dd;">
+  <div class="container">
+    <h2 class="section-title text-center">Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let faq of faqs">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ faq.question }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ faq.answer }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta" style="background: linear-gradient(to right, #ffd9a3, #ffcc80);">
+  <div class="container text-center">
+    <h2 class="cta-title">Ready to Embark on a Journey of Wisdom?</h2>
+    <p>Join us today and deepen your understanding of Sanatan Dharma.</p>
+    <button mat-raised-button color="primary" class="btn-primary mt-3">Get Started</button>
   </div>
 </section>
