@@ -1,0 +1,41 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg dharma-navbar shadow-sm">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <mat-icon color="accent" fontSize="large">auto_stories</mat-icon>
+      <span class="ms-2 navbar-title">Sanatan GPT</span>
+    </a>
+    <!-- Toggler for mobile view -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" *ngFor="let item of navItems">
+          <ng-container *ngIf="!item.isButton">
+            <a class="nav-link" [href]="item.link">
+              <mat-icon class="me-1">{{ item.icon }}</mat-icon>
+              {{ item.label }}
+            </a>
+          </ng-container>
+          <ng-container *ngIf="item.isButton">
+            <button mat-raised-button color="primary" [routerLink]="item.link" class="ms-3">
+              <mat-icon class="me-1">{{ item.icon }}</mat-icon>
+              {{ item.label }}
+            </button>
+          </ng-container>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

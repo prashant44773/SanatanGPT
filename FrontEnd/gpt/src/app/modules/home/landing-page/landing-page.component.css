@@ -1,103 +1,180 @@
-/* landing-page.component.css */
-
-/* Sacred Color Background for Dharma */
-.hero {
-  /* background-color: #f9c74f; Sacred yellow color */
-  background-image: linear-gradient(to top, #f9c74f, #facb61, #fad071, #fad481, #fad891);
-  padding: 60px 0;
-  color: white;
+/* General Styles */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  color: #c85d00;
+  margin-bottom: 20px;
 }
 
 /* Hero Section */
-.hero-content {
-  text-align: left;
-  margin-bottom: 20px;
+.hero {
+  padding: 60px 0;
 }
 
 .hero-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  color: #d35400;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  color: #6d4c41;
 }
 
-/* Star Icon */
-.hero-icon {
-  font-size: 3rem;
-  margin-bottom: 15px; /* Distance between icon and title */
-  color: #e63946; /* Red, symbolic in Dharma */
+.hero-buttons button {
+  border-radius: 25px;
+  font-weight: bold;
 }
 
-/* Vyas Image */
 .hero-image img {
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle 3D effect */
+  max-width: 100%;
+  border: 5px solid #ffd9a3;
+  border-radius: 50%;
 }
 
 /* Features Section */
 .features {
-  padding: 40px 0;
+  padding: 60px 0;
+}
+
+.features .section-title {
+  font-family: 'Playfair Display', serif;
+  color: #c85d00;
+  margin-bottom: 40px;
 }
 
 .feature {
-  margin-bottom: 20px;
+  background: #fff5e1;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .hero-image img {
-    margin-top: 20px;
-  }
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Body and Background */
-body {
-  margin: 0;
-  background: linear-gradient(to bottom, #f8e6c1, #a67c52); /* Gradient background to give sacred feel */
-  font-family: 'Garamond', serif;
-  color: #4e3a2e;
+.feature-icon-container {
+  margin-bottom: 15px;
 }
 
-/* Landing Page Container */
-.landing-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.feature-icon {
+  font-size: 48px;
+  color: #ff9800;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 50%;
+  background-color: rgba(255, 152, 0, 0.1);
 }
 
-/* Navbar Styling */
-.navbar {
-  background-color: rgba(255, 255, 255, 0.85);
+.feature-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d35400;
+  margin-top: 10px;
 }
 
-/* Footer Styling */
-.footer {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 10px 0;
+.feature-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #6d4c41;
+}
+
+
+/* Scriptural Highlights Section */
+.scriptural-highlights {
+  padding: 60px 0;
+  background-color: #fff5e1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.scriptural-highlights .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #c85d00;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.scripture {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scripture:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.scripture-card-wrapper {
+  padding: 20px;
   text-align: center;
 }
 
-/* Button Styling */
-.btn-primary {
-  background-color: #d49b4d;
-  border-color: #d49b4d;
+.scripture-title {
+  font-size: 24px;
+  color: #d35400;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
-.btn-primary:hover {
-  background-color: #b8860b;
-  border-color: #b8860b;
+.animated-title {
+  opacity: 0;
+  animation: fadeInUp 1s forwards 0.3s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Stylish Frame for Image */
+.image-frame {
+  border: 5px solid #f39c12;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.scripture-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.scripture-image:hover {
+  transform: scale(1.05);
+}
+
+
+/* FAQ Section */
+.faq mat-expansion-panel {
+  margin-bottom: 10px;
+}
+
+/* Call to Action Section */
+.cta {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.cta-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }

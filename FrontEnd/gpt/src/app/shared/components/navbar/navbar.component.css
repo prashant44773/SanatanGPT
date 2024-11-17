@@ -1,0 +1,25 @@
+.dharma-navbar {
+  background-color: #fff5e1;
+  padding: 1rem 0;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8a4f1d;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8a4f1d !important;
+}
+
+.nav-link:hover {
+  color: #d2691e !important;
+}
+
+.nav-item button {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
