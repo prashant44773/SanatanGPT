@@ -1,0 +1,89 @@
+/* Left Section Background with Sanatan Dharma Theme */
+.dharma-background {
+  background: linear-gradient(135deg, #f7cf72, #e09b44);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left Section Elegant Title */
+.elegant-title {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Left Section Subtitle */
+.elegant-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #fdfdfd;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Section Buttons */
+.left-action-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.left-action-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Form Card Styles */
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title inside card */
+.card h2 {
+  font-family: 'Merriweather', serif;
+  color: #333333;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}

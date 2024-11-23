@@ -1,1 +1,91 @@
-<p>login works!</p>
+<div class="container-fluid d-flex login-container">
+  <!-- Left Section (Elegant Design) -->
+  <div
+    class="col-12 col-md-6 dharma-left-section d-flex flex-column justify-content-center align-items-center"
+    [ngClass]="{'dharma-background': true}"
+  >
+    <div class="text-center text-white animate-fade-in">
+      <h2 class="display-4 mb-4 elegant-title">Sanatan GPT</h2>
+      <p class="lead elegant-subtitle">
+        Unlock the Ancient Wisdom of Sanatan Dharma
+      </p>
+      <div class="button-group mt-4">
+        <button
+          mat-raised-button
+          color="primary"
+          class="left-action-btn me-3"
+          (click)="isLogin = true"
+        >
+          Login
+        </button>
+        <button
+          mat-raised-button
+          color="accent"
+          class="left-action-btn"
+          (click)="isLogin = false"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Section (Forms) -->
+  <div class="col-12 col-md-6 dharma-right-section d-flex justify-content-center align-items-center">
+    <div class="card p-5 shadow-lg w-100 animate-slide-in">
+      <h2 class="text-center mb-4">{{ isLogin ? 'Welcome Back' : 'Create an Account' }}</h2>
+
+      <form>
+        <!-- Full Name (Signup only) -->
+        <ng-container *ngIf="!isLogin">
+          <div class="mb-3">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Full Name</mat-label>
+              <input matInput type="text" placeholder="Enter your full name" required />
+            </mat-form-field>
+          </div>
+        </ng-container>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Enter your email" required />
+          </mat-form-field>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Enter your password" required />
+          </mat-form-field>
+        </div>
+
+        <ng-container *ngIf="!isLogin">
+          <!-- Confirm Password (Signup only) -->
+          <div class="mb-3">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Confirm Password</mat-label>
+              <input matInput type="password" placeholder="Re-enter your password" required />
+            </mat-form-field>
+          </div>
+        </ng-container>
+
+        <!-- Submit Button -->
+        <div class="d-grid">
+          <button mat-raised-button color="primary" class="w-100 mt-4">
+            {{ isLogin ? 'Login' : 'Sign Up' }}
+          </button>
+        </div>
+      </form>
+
+      <!-- Toggle between Login and Signup -->
+      <div class="text-center mt-3">
+        <a (click)="toggleForm()" class="text-decoration-none">
+          {{ isLogin ? "Don't have an account? Sign Up" : 'Already have an account? Login' }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

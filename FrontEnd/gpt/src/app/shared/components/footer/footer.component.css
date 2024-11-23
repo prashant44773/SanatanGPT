@@ -1,0 +1,17 @@
+.dharma-footer {
+  background-color: #1b1f3b; /* Deep sacred blue */
+  .dharma-title {
+    font-weight: 600;
+    color: #f9c74f; /* Sacred gold */
+  }
+  a {
+    transition: color 0.3s;
+    &:hover {
+      color: #f9c74f; /* Golden accent on hover */
+    }
+  }
+  .dharma-highlight {
+    color: #f9c74f;
+    font-weight: bold;
+  }
+}

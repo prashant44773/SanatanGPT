@@ -9,7 +9,7 @@ import { SharedModule } from '../../sharedModuels/shared.module';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  
+
   navItems = [
     { label: 'Home', link: '#home', icon: 'home' },
     { label: 'Scriptures', link: '#scriptures', icon: 'auto_stories' },
@@ -17,5 +17,5 @@ export class NavbarComponent {
     { label: 'FAQs', link: '#faqs', icon: 'help_outline' },
     { label: 'Explore', link: '#explore', icon: 'search', isButton: true },
   ];
-  
+
 }

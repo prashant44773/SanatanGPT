@@ -23,14 +23,14 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item" *ngFor="let item of navItems">
           <ng-container *ngIf="!item.isButton">
-            <a class="nav-link" [href]="item.link">
-              <mat-icon class="me-1">{{ item.icon }}</mat-icon>
-              {{ item.label }}
+            <a class="nav-link d-flex align-items-center" [href]="item.link">
+              <mat-icon class="me-2" style="font-size: 20px;">{{ item.icon }}</mat-icon>
+              <span>{{ item.label }}</span>
             </a>
           </ng-container>
           <ng-container *ngIf="item.isButton">
             <button mat-raised-button color="primary" [routerLink]="item.link" class="ms-3">
-              <mat-icon class="me-1">{{ item.icon }}</mat-icon>
+              <mat-icon class="me-2" style="font-size: 20px;">{{ item.icon }}</mat-icon>
               {{ item.label }}
             </button>
           </ng-container>
